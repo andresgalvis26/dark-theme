@@ -30,8 +30,15 @@ body.dark-theme{
 declaradas previamente en el apartado superior */
 body{
     background-color: var(--bg-color);
+    /*text-align: center;*/
 }
 
 h1{
     color: var(--color-texto);
+}
+
+.container{
+    text-align: center;
+    /*border: 1px solid black;*/
+    border-radius: 30%;
 }
