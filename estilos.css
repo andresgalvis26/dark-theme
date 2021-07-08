@@ -1,0 +1,37 @@
+body {
+    /* Colocando las variables en el body */
+    /* ESTO NO ES RECOMENDADO. VARIABLES VAN EN ROOT */
+    --bg-color: #DDD;
+    --color-texto: #EE6353;
+}
+
+
+body.dark-theme{
+    --bg-color: rgb(47, 47, 47);
+    --color-texto: #ffb847;
+}
+
+
+/* Con esta línea de código se detecta si el sistema está en modo claro u oscuro */
+/* Dependiendo de esto, se mostrará el sitio claro u oscuro */
+@media (prefers-color-scheme: dark) {
+    body{
+        --bg-color: rgb(47, 47, 47);
+        --color-texto: #ffb847;
+    }
+
+    body.light-theme{
+        --bg-color: #DDD;
+        --color-texto: #EE6353;
+    }
+}
+
+/* CSS trabaja en cascada, por lo cual, es necesario declarar el uso de las variables
+declaradas previamente en el apartado superior */
+body{
+    background-color: var(--bg-color);
+}
+
+h1{
+    color: var(--color-texto);
+}
